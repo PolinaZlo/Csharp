@@ -1,0 +1,55 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace laba_0_A
+{
+    class Program
+    {
+        private static int ReadInt(string prompt)
+        {
+            while (true)
+            {
+                Console.Write(prompt);
+                int result;
+
+                if (int.TryParse(Console.ReadLine(), out result))
+                    return result;
+
+                Console.ForegroundColor = ConsoleColor.Yellow; //уставновка цвета
+                Console.WriteLine("\t¬веден неверный формат данных, повторите попытку!");
+                Console.ResetColor(); //сбрасываем в стандартный
+            }
+        }
+        private static float ReadFloat(string prompt)
+        {
+            while (true)
+            {
+                Console.Write(prompt);
+                float result;
+
+                if (float.TryParse(Console.ReadLine(), out result))
+                    return result;
+
+                Console.ForegroundColor = ConsoleColor.Yellow; //уставновка цвета
+                Console.WriteLine("\t¬веден неверный формат данных, повторите попытку!");
+                Console.ResetColor(); //сбрасываем в стандартный
+            }
+        }
+        static void Main()
+        {
+            Angle ang = new Angle();
+
+            ang.gr = ReadInt("¬ведите градусы -> ");
+            ang.min = ReadFloat("¬ведите минуты -> ");
+            Console.Write("¬ведите буквой направление (N, S, E  или  W) -> ");
+            try { ang.s = Convert.ToChar(Console.ReadLine()); }
+            catch { }
+
+            ang.Show();  //вывод
+            Console.ReadKey();
+        }
+    }
+}

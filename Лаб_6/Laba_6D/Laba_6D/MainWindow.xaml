@@ -1,0 +1,15 @@
+﻿<Window x:Class="Laba_6D.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="Laba_6C" Height="491.618" Width="372.11">
+    <Grid>
+        <TreeView x:Name="tv" HorizontalAlignment="Left" Height="245" Margin="10,10,0,0" VerticalAlignment="Top" Width="344" TreeViewItem.Expanded="Tv_Expanded" TreeViewItem.Selected="Tv_Selected"/>
+        <RichTextBox x:Name="rtb" HorizontalAlignment="Left" Height="191" Margin="10,260,0,0" VerticalAlignment="Top" Width="344" IsReadOnly="True">
+            <FlowDocument>
+                <Paragraph>
+                </Paragraph>
+            </FlowDocument>
+        </RichTextBox>
+
+    </Grid>
+</Window>

@@ -1,0 +1,20 @@
+﻿<Window x:Class="L11B.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:L11B"
+        mc:Ignorable="d"
+        Title="laba_12B" Height="261.715" Width="556.172" Background="Lavender">
+    <Grid>
+        <Button Name="writeBtn" Content="Выгрузить в Excel" Height="30" Width="120" Click="WriteBtn_Click" Margin="0,120,410,68" HorizontalAlignment="Right" />
+        <Button Name="openBtn" Content="Открыть файл" Height="30" Click="OpenBtn_Click" Margin="0,60,410,0" VerticalAlignment="Top" HorizontalAlignment="Right" Width="120" />
+        <DataGrid AutoGenerateColumns="False" CanUserAddRows="False" Name="dgData" HorizontalAlignment="Left" Height="169" Margin="196,19,0,0" VerticalAlignment="Top" Width="282">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Id" Binding="{Binding Path=Id}" Width="*"/>
+                <DataGridTextColumn Header="Name" Binding="{Binding Path=Name}" Width="*"/>
+                <DataGridTextColumn Header="Price" Binding="{Binding Path=Price}" Width="*"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>

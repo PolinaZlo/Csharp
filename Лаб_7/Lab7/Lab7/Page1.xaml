@@ -1,0 +1,19 @@
+﻿<Page x:Class="Lab7.Page1"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Lab7"
+      mc:Ignorable="d" 
+      d:DesignHeight="450"
+      Title="Page1" Width="681.647">
+    <Grid Background="White">
+        <Button x:Name="selectBtn" Content="Выбрать начинку"  HorizontalAlignment="Left" Margin="10,182,0,0" VerticalAlignment="Top" Width="275" Height="29" Hyperlink.Click="SelectBtn_Click"/>
+        <Button x:Name="buyBtn" Content="Оформить заказ" HorizontalAlignment="Left" Margin="10,244,0,0" VerticalAlignment="Top" Width="275" Height="29" Click="BuyBtn_Click"/>
+        <RadioButton x:Name="r1" Content="Большая пицца (600 руб.)" HorizontalAlignment="Left" Margin="10,16,0,0" VerticalAlignment="Top" FontSize="20"/>
+        <RadioButton x:Name="r2" Content="Средняя пицца (450 руб.)" HorizontalAlignment="Left" Margin="10,47,0,0" VerticalAlignment="Top" FontSize="20"/>
+        <RadioButton x:Name="r3" Content="Маленькая пицца (290 руб.)" HorizontalAlignment="Left" Margin="10,78,0,0" VerticalAlignment="Top" FontSize="20" IsChecked="True"/>
+        <ListBox x:Name="lb" HorizontalAlignment="Left" Height="388" Margin="303,52,0,0" VerticalAlignment="Top" Width="369"/>
+        <Label Content="Выбранные начинки:" HorizontalAlignment="Left" Margin="303,10,0,0" VerticalAlignment="Top" FontSize="20"/>
+    </Grid>
+</Page>

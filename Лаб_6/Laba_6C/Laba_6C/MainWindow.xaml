@@ -1,0 +1,18 @@
+﻿<Window x:Class="Laba_6C.MainWindow"
+         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Laba_6C"
+        mc:Ignorable="d"
+        Title="Laba_6C" Height="450" Width="533.75" Background="#FFF1ED86">
+    <Grid>
+        <RichTextBox x:Name="rtb" HorizontalAlignment="Left" Height="364" Margin="10,45,0,0" VerticalAlignment="Top" Width="498"/>
+        <ToolBar HorizontalAlignment="Left" Height="30" Margin="10,10,0,0" VerticalAlignment="Top" Width="498">
+            <Button x:Name="openBtn" Content="Открыть" HorizontalAlignment="Left" VerticalAlignment="Top" Width="150" Height="23" Click="OpenBtn_Click"/>
+            <Button x:Name="saveBtn" Content="Сохранить" HorizontalAlignment="Left" Margin="0" VerticalAlignment="Top" Width="150" Height="23" Click="SaveBtn_Click"/>
+            <Button x:Name="writeBtn" Content="Дописать в конец" HorizontalAlignment="Left" Margin="0" VerticalAlignment="Top" Width="150" Height="23" Click="WriteBtn_Click"/>
+        </ToolBar>
+
+    </Grid>
+</Window>

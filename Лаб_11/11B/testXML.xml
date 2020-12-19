@@ -1,0 +1,22 @@
+<NewDataSet>
+  <Employee>
+    <Name>Anna</Name>
+    <Age>30</Age>
+    <Programmer>456</Programmer>
+  </Employee>
+  <Employee>
+    <Name>Tom</Name>
+    <Age>32</Age>
+    <Programmer>C#</Programmer>
+  </Employee>
+  <Employee>
+    <Name>Dog Sharik</Name>
+    <Age>9</Age>
+    <Programmer>Java</Programmer>
+  </Employee>
+  <Employee>
+    <Name>Cat Matroskin</Name>
+    <Age>8</Age>
+    <Programmer>Phyton</Programmer>
+  </Employee>
+</NewDataSet>

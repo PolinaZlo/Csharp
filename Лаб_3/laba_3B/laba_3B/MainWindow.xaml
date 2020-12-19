@@ -1,0 +1,21 @@
+﻿<Window x:Class="laba_3B.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Лаба_3B" Height="460.175" Width="537">
+    <Grid Margin="0,0,0,-1" Background="YellowGreen">
+        <Image x:Name="img" HorizontalAlignment="Left" Height="173" VerticalAlignment="Top" Width="232" Source="img/pic.jpg" Canvas.Top="-21" Margin="41,37,0,0"/>
+        <Grid HorizontalAlignment="Left" Height="129" Margin="0,305,0,0" VerticalAlignment="Top" Width="529" Background="Blue">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Button x:Name="MoveUp" Content="↑" HorizontalAlignment="Left" Margin="281,14,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="MoveUp_Click"/>
+            <Button x:Name="Move_Right" Content="→" HorizontalAlignment="Left" Margin="336,69,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="Move_Right_Click"/>
+            <Button x:Name="MoveLeft" Content="←" HorizontalAlignment="Left" Margin="281,69,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="MoveLeft_Click"/>
+            <Button x:Name="MoveDown" Content="↓" HorizontalAlignment="Left" Margin="336,14,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="MoveDown_Click"/>
+            <Button x:Name="Decrease" Content="-" HorizontalAlignment="Left" Margin="159,14,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="Decrease_Click"/>
+            <Button x:Name="Increase" Content="+" HorizontalAlignment="Left" Margin="214,14,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="Increase_Click"/>
+            <Button x:Name="RotateRight" Content="↷" HorizontalAlignment="Left" Margin="214,69,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="RotateRight_Click"/>
+            <Button x:Name="RotateLeft" Content="↶" HorizontalAlignment="Left" Margin="159,69,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="RotateLeft_Click"/>
+        </Grid>
+    </Grid>
+</Window>

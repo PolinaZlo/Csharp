@@ -1,0 +1,41 @@
+static string con =@"Server=ADSEK\SQLRSV; database = Aleksandrov_Oleg;";
+
+
+
+private static void PutImageBinaryInDb(string iFile)
+{
+	// конвертация изображения в байты
+	byte[] imageData = null;
+	FileInfo fInfo = new FileInfo(iFile);
+	long numBytes = fInfo.Length;
+	FileStream fStream = new FileStream(iFile, FileMode.Open, FileAccess.Read);
+	BinaryReader br = new BinaryReader(fStream);
+	imageData = br.ReadBytes((int)numBytes);
+ 
+	// получение расширения файла изображения не забыв удалить точку перед расширением
+	string iImageExtension = (Path.GetExtension(iFile)).Replace(".", "").ToLower();
+ 
+	// запись изображения в БД
+	using (SqlConnection sqlConnection = new SqlConnection(@"Data Source=(localdb)\MSSQLLocalDB; Initial Catalog=dbtest; User Id=sa; Password=pass")) // строка подключения к БД
+	{
+		string commandText = "INSERT INTO report (screen, screen_format) VALUES(@screen, @screen_format)"; // запрос на вставку
+		SqlCommand command = new SqlCommand(commandText, sqlConnection);
+		command.Parameters.AddWithValue("@screen", (object)imageData); // записываем само изображение
+		command.Parameters.AddWithValue("@screen_format", iImageExtension); // записываем расширение изображения
+		sqlConnection.Open();
+		command.ExecuteNonQuery();
+		sqlConnection.Close();
+	}
+}
+
+
+
+PutImageBinaryInDb(@"C:\primer.jpg"); // запись изображения в БД
+
+
+using System;
+using System.IO;
+using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.Data;
+using System.Drawing;

@@ -1,0 +1,37 @@
+﻿<Window x:Class="Lab4A.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Lab4A"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <RichTextBox x:Name="rtb" HorizontalAlignment="Left" Height="330" Margin="10,79,0,0" VerticalAlignment="Top" Width="772" FontFamily="Times New Roman" BorderBrush="#FF69FBE1">
+            <FlowDocument>
+                <Paragraph>
+                    <Run Text="ТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекст"/>
+                </Paragraph>
+            </FlowDocument>
+        </RichTextBox>
+        <ToolBar HorizontalAlignment="Left" Height="74" VerticalAlignment="Top" Width="792" Foreground="#FFF55C5C">
+            <ToolBar.Background>
+                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                    <GradientStop Color="#FFE2E0DB" Offset="0"/>
+                    <GradientStop Color="#FFEAE8E4" Offset="0.5"/>
+                    <GradientStop Color="#FFD5D2CA" Offset="0.9"/>
+                    <GradientStop Color="#FFF9CF6E" Offset="1"/>
+                </LinearGradientBrush>
+            </ToolBar.Background>
+            <Button x:Name="boldBtn" Content="B" Height="35" VerticalAlignment="Top" Width="75" Margin="0,17,0,0" Click="BoldBtn_Click" FontWeight="Bold"/>
+            <Button x:Name="italicBtn" Content="I" Height="35" VerticalAlignment="Top" Width="75" Margin="0,17,0,0" FontStyle="Italic" Click="ItalicBtn_Click"/>
+            <Slider x:Name="sizeSlider" Height="23" VerticalAlignment="Top" Width="212" Margin="0,25,0,0" ValueChanged="SizeSlider_ValueChanged" Minimum="6" Maximum="20" SmallChange="0.5" Value="12"/>
+            <ComboBox x:Name="fontCB" Height="28" Margin="0,21,0,0" VerticalAlignment="Top" Width="133" SelectedIndex="0" SelectionChanged="FontCB_SelectionChanged">
+                <ComboBoxItem Content="Times New Roman" FontFamily="Times New Roman" />
+                <ComboBoxItem Content="Comic Sans MS" FontFamily="Comic Sans MS"/>
+                <ComboBoxItem Content="Century" FontFamily="Century"/>
+               
+            </ComboBox>
+        </ToolBar>
+    </Grid>
+</Window>

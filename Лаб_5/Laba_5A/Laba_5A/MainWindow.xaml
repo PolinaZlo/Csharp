@@ -1,0 +1,13 @@
+﻿<Window x:Class="Laba_5A.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Лаба_5A" Height="207.971" Width="304.551" Background="#FFF9DEFD"
+        TextBox.TextChanged="TextBox_TextChanged">
+    <Grid Height="185" VerticalAlignment="Top" Margin="0,0,2,-4"  TextBox.TextChanged="TextBox_TextChanged" Background="#FFFFEFCC">
+        <RadioButton x:Name="r1" Content="Событие TextBox.TextChanged в TextBox" HorizontalAlignment="Left" Margin="22,26,0,0" VerticalAlignment="Top" IsEnabled="False"/>
+        <RadioButton x:Name="r2" Content="Событие TextBox.TextChanged в Grid" HorizontalAlignment="Left" Margin="22,61,0,0" VerticalAlignment="Top" IsEnabled="False"/>
+        <RadioButton x:Name="r3" Content="Событие TextBox.TextChanged в Window" HorizontalAlignment="Left" Margin="22,96,0,0" VerticalAlignment="Top" IsEnabled="False"/>
+        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="23" Margin="10,136,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="259" TextChanged="TextBox_TextChanged"/>
+
+    </Grid>
+</Window>
